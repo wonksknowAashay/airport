@@ -1,0 +1,15 @@
+Website: Airport
+-Admin
+    -Add flights
+    -Delete flights
+    -Update prices
+    -Check finances
+    -Log available and booked flights
+    -Block bookings
+-Public
+    -Buy tickets
+        -Have to fill out form:
+         location, destination, number of people,
+         start and end date
+    -Cancel flights
+    -View their ticket

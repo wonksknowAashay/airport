@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="text-center mt-5"> Book a Flight Today! </h1>
+
+<div class="row justify-content-center">
+    <form method="post" class="col-6">
+        <div class="m-3">
+            <label> Departure Date </label>
+            <input name="departuredate" type="date" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label> Source </label>
+            <input name="source" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Destination</label>
+            <input name="destination" class="form-control">
+        </div>
+
+        <button class="btn btn-success m-3"> Find </button>
+    </form>
+</div>
+
+{% endblock %}

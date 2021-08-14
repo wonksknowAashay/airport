@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="text-center mt-5"> Update Flight </h1>
+
+<div class="row justify-content-center">
+    <form method="post" class="col-6">
+        <div class="m-3">
+            <label>Airline</label>
+            <input name="airline" class="form-control" value='{{flight["airline"]}}'>
+        </div>
+
+        <div class="m-3">
+            <label>Identification Number</label>
+            <input name="idnumber" class="form-control" value='{{flight["idnumber"]}}' readonly>
+        </div>
+
+        <div class="m-3">
+            <label> Departure Time </label>
+            <input name="departuretime" type="time" class="form-control" value='{{flight["departuretime"]}}'>
+        </div>
+
+        <div class="m-3">
+            <label> Departure Date </label>
+            <input name="departuredate" type="date" class="form-control" value='{{flight["departuredate"]}}'>
+        </div>
+
+        <div class="m-3">
+            <label> Source </label>
+            <input name="source" class="form-control" value='{{flight["source"]}}'>
+        </div>
+
+        <div class="m-3">
+            <label>Destination</label>
+            <input name="destination" class="form-control" value='{{flight["destination"]}}'>
+        </div>
+
+        <div class="m-3">
+            <label>Flight Capacity</label>
+            <input name="capacity" class="form-control" value='{{flight["capacity"]}}'>
+        </div>
+
+        <button class="btn btn-success m-3"> Update </button>
+    </form>
+</div>
+
+
+
+{% endblock %}

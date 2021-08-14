@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="p-3 text-center"> Flights that we found for you... </h1>
+
+
+<table class="table table-striped table-dark">
+    <thead>
+    <tr>
+        <th scope="col">ID Number</th>
+        <th scope="col">Airline</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Departure Date</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Flight Capacity</th>
+        <th scope="col"> </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for x in flights %}
+    <tr>
+        <td>{{x["idnumber"]}}</td>
+        <td> {{x["airline"]}}</td>
+        <td> {{x["departuretime"]}}</td>
+        <td> {{x["departuredate"]}}</td>
+        <td> {{x["source"]}}</td>
+        <td> {{x["destination"]}}</td>
+        <td> {{x["capacity"]}}</td>
+        <td>
+            <form method="PUT">
+                <input name="passengers" type="number" min="1" max="{{x['capacity']}}" value="1">
+                <button name="flight_id" value="{{x['idnumber']}}" class="btn btn-primary" type="submit"> Book </button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

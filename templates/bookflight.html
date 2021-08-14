@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="p-3 text-center"> Book your flight! </h1>
+<div class="row justify-content-center">
+    <form method="post" class="col-6">
+        <div class="m-3">
+            <label>Name</label>
+            <input name="name" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Number of Travelers</label>
+            <input name="number" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Credit Card Number</label>
+            <input name="creditcard" class="form-control">
+        </div>
+
+        <button class="btn btn-success m-3"> Create </button>
+    </form>
+</div>
+
+
+{% endblock %}

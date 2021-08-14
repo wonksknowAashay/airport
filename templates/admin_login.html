@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="text-center mt-5"> Admin Login </h1>
+
+<div class="row justify-content-center">
+    <form method="post" class="col-6">
+        <div class="m-3">
+            <label>Username</label>
+            <input name="username" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Password</label>
+            <input name="password" class="form-control">
+        </div>
+
+        <button class="btn btn-success m-3"> Submit</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="text-right mr-4 mt-2">
+    <a href="/logout" class="text-danger mt-4"> Log Out </a>
+</div>
+
+<h1 class="p-3 text-center"> Administration Dashboard</h1>
+
+<div class="text-center">
+    <a href="/createflight" class="btn btn-success"> Create Flight </a>
+    <a href="/deleteflight" class="btn btn-warning"> Delete Flight </a>
+    <a href="/checkfinances" class="btn btn-danger"> Check Bookings </a>
+    <a href="/seeallflights" class="btn btn-secondary"> See All Flights </a>
+</div>
+
+
+{% endblock %}

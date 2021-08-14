@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h1 class="text-center mt-5"> Create Flight </h1>
+
+<div class="row justify-content-center">
+    <form method="post" class="col-6">
+        <div class="m-3">
+            <label>Airline</label>
+            <input name="airline" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label> Departure Time </label>
+            <input name="departuretime" type="time" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Flight Type</label>
+            <select name="type" class="form-control" id="flightType">
+                <option>Regular</option>
+                <option>One-Time</option>
+            </select>
+        </div>
+
+        <div class="m-3" id="dateSection" style="display:none">
+            <label> Departure Date </label>
+            <input name="departuredate" type="date" class="form-control">
+        </div>
+
+        <div class="m-3" id="daySection">
+            <label> Departure Day </label>
+            <select name="departureday" class="form-control">
+                <option> </option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+        </div>
+        <div class="m-3">
+            <label> Source </label>
+            <input name="source" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Destination</label>
+            <input name="destination" class="form-control">
+        </div>
+
+        <div class="m-3">
+            <label>Flight Capacity</label>
+            <input name="capacity" class="form-control">
+        </div>
+
+
+
+        <button class="btn btn-success m-3"> Create </button>
+    </form>
+</div>
+
+<script>
+    myselectbox=document.getElementById("flightType")
+    myselectbox.onchange=function()
+    {
+        selectedOption=myselectbox.value
+        if(selectedOption=="One-Time")
+        {
+            document.getElementById("dateSection").style.display="block"
+            document.getElementById("daySection").style.display="none"
+        }
+
+        else
+        {
+            document.getElementById("dateSection").style.display="none"
+            document.getElementById("daySection").style.display="block"
+        }
+    }
+</script>
+
+
+{% endblock %}
